@@ -346,6 +346,7 @@
         display: flex;
         width: max-content;
         animation: run 26s linear infinite;
+        font-size: 0;
       }
       .track span {
         font-size: 13.5px;
@@ -734,6 +735,28 @@
         96% {
           transform: rotate(4deg);
         }
+      }
+
+      /* === растянуть контент на всю высоту экрана === */
+      .wrap {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-height: calc(
+          100svh - env(safe-area-inset-top, 0px) -
+            env(safe-area-inset-bottom, 0px)
+        );
+      }
+      .grid {
+        flex: 1 1 auto;
+        max-height: 210px;
+        min-height: 0;
+      }
+      .grid .tile {
+        height: 100%;
+      }
+      .socials {
+        margin-bottom: 4px;
       }
 
       @media (max-width: 350px) {
