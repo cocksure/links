@@ -172,7 +172,7 @@
       .topbar {
         display: flex;
         justify-content: flex-end;
-        margin-bottom: 2px;
+        margin-bottom: 8px;
       }
       .lang {
         position: relative;
@@ -664,7 +664,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 8px;
-        margin-top: 10px;
+        margin-top: 18px;
       }
       .soc {
         display: flex;
@@ -737,28 +737,6 @@
         }
       }
 
-      /* === растянуть контент на всю высоту экрана === */
-      .wrap {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        min-height: calc(
-          100svh - env(safe-area-inset-top, 0px) -
-            env(safe-area-inset-bottom, 0px)
-        );
-      }
-      .grid {
-        flex: 1 1 auto;
-        max-height: 210px;
-        min-height: 0;
-      }
-      .grid .tile {
-        height: 100%;
-      }
-      .socials {
-        margin-bottom: 4px;
-      }
-
       @media (max-width: 350px) {
         .wrap {
           padding-inline: 12px;
@@ -787,7 +765,7 @@
           margin: 0 0 4px;
         }
         .topbar {
-          margin-bottom: 0;
+          margin-bottom: 6px;
         }
         .avatar {
           width: 72px;
@@ -818,7 +796,7 @@
           height: 46px;
         }
         .socials {
-          margin-top: 8px;
+          margin-top: 16px;
         }
       }
       @media (prefers-reduced-motion: reduce) {
